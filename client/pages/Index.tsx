@@ -199,40 +199,14 @@ export default function Index() {
         {/* Dynamic Background */}
         <div className="absolute inset-0">
           <div
-            className="absolute inset-0 bg-center bg-cover"
+            className="absolute inset-0 bg-center bg-cover bg-fixed"
             style={{
               backgroundImage:
-                'url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1600&q=80")',
+                'url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2000&q=80")',
             }}
           />
-          <div className="absolute inset-0 bg-black/60"></div>
-          <div className="absolute inset-0 gradient-mesh opacity-20"></div>
-          <div className="absolute inset-0 opacity-30">
-            <div
-              className="absolute w-96 h-96 bg-gradient-to-r from-primary/40 to-accent/40 rounded-full mix-blend-multiply filter blur-3xl animate-float"
-              style={{
-                top: "10%",
-                left: "10%",
-                transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`,
-              }}
-            ></div>
-            <div
-              className="absolute w-96 h-96 bg-gradient-to-r from-emerald-500/40 to-teal-500/40 rounded-full mix-blend-multiply filter blur-3xl animate-float animation-delay-2000"
-              style={{
-                top: "40%",
-                right: "10%",
-                transform: `translate(${mousePosition.x * -0.015}px, ${mousePosition.y * 0.015}px)`,
-              }}
-            ></div>
-            <div
-              className="absolute w-96 h-96 bg-gradient-to-r from-cyan-500/40 to-teal-600/40 rounded-full mix-blend-multiply filter blur-3xl animate-float animation-delay-4000"
-              style={{
-                bottom: "10%",
-                left: "20%",
-                transform: `translate(${mousePosition.x * 0.01}px, ${mousePosition.y * -0.01}px)`,
-              }}
-            ></div>
-          </div>
+          <div className="absolute inset-0 bg-black/75"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80"></div>
         </div>
 
         <div
