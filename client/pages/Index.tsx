@@ -497,7 +497,7 @@ export default function Index() {
       {/* Publications Section */}
       <section id="publications" className="scroll-mt-28 py-32 scroll-fade-in relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(800px_400px_at_50%_-10%, hsl(var(--primary) / 0.25), transparent_60%)" }} />
+          <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(800px 400px at 50% -10%, hsl(var(--primary) / 0.25), transparent 60%)" }} />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
         </div>
         <div className="container mx-auto px-6">
@@ -596,7 +596,7 @@ export default function Index() {
       {/* Experience Section */}
       <section id="experience" className="scroll-mt-28 py-32 scroll-fade-in relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(700px_400px_at_-10%_20%, hsl(var(--primary) / 0.18), transparent_60%), radial-gradient(600px_300px_at_110%_80%, hsl(var(--accent) / 0.12), transparent_60%)" }} />
+          <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(700px 400px at -10% 20%, hsl(var(--primary) / 0.18), transparent 60%), radial-gradient(600px 300px at 110% 80%, hsl(var(--accent) / 0.12), transparent 60%)" }} />
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
         </div>
         <div className="container mx-auto px-6">
@@ -931,7 +931,7 @@ export default function Index() {
       {/* Connect Section */}
       <section id="connect" className="scroll-mt-28 py-32 scroll-fade-in relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(900px_450px_at_50%_110%, hsl(var(--primary) / 0.25), transparent_60%)" }} />
+          <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(900px 450px at 50% 110%, hsl(var(--primary) / 0.25), transparent 60%)" }} />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
         <div className="container mx-auto px-6">
