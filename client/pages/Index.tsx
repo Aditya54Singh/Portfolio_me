@@ -114,7 +114,7 @@ export default function Index() {
       {/* Enhanced Navigation */}
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-500 ${navBackground
-          ? "glass backdrop-blur-2xl border-b border-emerald-500/20 shadow-glass"
+          ? "glass backdrop-blur-2xl border-b border-primary/20 shadow-glass"
           : "bg-transparent"
           }`}
       >
@@ -198,6 +198,14 @@ export default function Index() {
       >
         {/* Dynamic Background */}
         <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 bg-center bg-cover"
+            style={{
+              backgroundImage:
+                'url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1600&q=80")',
+            }}
+          />
+          <div className="absolute inset-0 bg-black/60"></div>
           <div className="absolute inset-0 gradient-mesh opacity-20"></div>
           <div className="absolute inset-0 opacity-30">
             <div
@@ -313,7 +321,7 @@ export default function Index() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="scroll-mt-28 py-32 relative">
+      <section id="about" className="scroll-mt-28 py-32 relative scroll-fade-in">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-accent/10"></div>
         <div className="container mx-auto px-6 relative">
           <div className="max-w-6xl mx-auto">
@@ -416,7 +424,7 @@ export default function Index() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="scroll-mt-28 py-32 relative">
+      <section id="projects" className="scroll-mt-28 py-32 relative scroll-fade-in">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-accent/10"></div>
         <div className="container mx-auto px-6 relative">
           <div className="text-center mb-20">
@@ -513,7 +521,7 @@ export default function Index() {
       </section>
 
       {/* Publications Section */}
-      <section id="publications" className="scroll-mt-28 py-32">
+      <section id="publications" className="scroll-mt-28 py-32 scroll-fade-in">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 scroll-fade-in">
@@ -608,7 +616,7 @@ export default function Index() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="scroll-mt-28 py-32">
+      <section id="experience" className="scroll-mt-28 py-32 scroll-fade-in">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 scroll-fade-in">
@@ -686,7 +694,7 @@ export default function Index() {
 
 
       {/* Certifications Section */}
-      <section id="certifications" className="scroll-mt-28 py-32">
+      <section id="certifications" className="scroll-mt-28 py-32 scroll-fade-in">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 scroll-fade-in">
@@ -796,7 +804,7 @@ export default function Index() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="scroll-mt-28 py-32 relative overflow-hidden">
+      <section id="skills" className="scroll-mt-28 py-32 relative overflow-hidden scroll-fade-in">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-accent/10"></div>
 
         {/* Floating background elements */}
@@ -857,44 +865,37 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* Organic layout with different sizes */}
-              <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+              {/* Linear grid of technical skills with logos */}
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
                 {[
-                  { name: "Python", size: "large", color: "from-blue-500 to-blue-600" },
-                  { name: "TensorFlow", size: "medium", color: "from-orange-500 to-red-500" },
-                  { name: "C++", size: "medium", color: "from-purple-500 to-purple-600" },
-                  { name: "PyTorch", size: "large", color: "from-red-500 to-pink-500" },
-                  { name: "SQL", size: "small", color: "from-emerald-500 to-teal-500" },
-                  { name: "Pandas", size: "medium", color: "from-indigo-500 to-purple-500" },
-                  { name: "OpenCV", size: "medium", color: "from-green-500 to-emerald-500" },
-                  { name: "FastAPI", size: "small", color: "from-cyan-500 to-blue-500" },
-                  { name: "Seaborn", size: "small", color: "from-pink-500 to-rose-500" },
-                  { name: "GitHub", size: "small", color: "from-gray-600 to-gray-700" },
-                  { name: "DBMS", size: "medium", color: "from-violet-500 to-purple-500" }
-                ].map((skill, index) => {
-                  const sizeClasses = {
-                    small: "px-4 py-2 text-sm",
-                    medium: "px-6 py-3 text-base",
-                    large: "px-8 py-4 text-lg"
-                  };
-
-                  return (
-                    <div
-                      key={index}
-                      className={`group relative ${sizeClasses[skill.size]} glass rounded-full border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-110 hover:-translate-y-2 cursor-default overflow-hidden`}
-                      style={{
-                        animationDelay: `${index * 100}ms`,
-                        transform: `rotate(${Math.sin(index) * 3}deg)`
-                      }}
-                    >
-                      <div className={`absolute inset-0 bg-gradient-to-r ${skill.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                      <span className="relative font-medium text-foreground group-hover:text-white transition-colors duration-300">
-                        {skill.name}
-                      </span>
-                    </div>
-                  );
-                })}
+                  { name: "Python", logo: "https://cdn.simpleicons.org/python/3776AB" },
+                  { name: "TensorFlow", logo: "https://cdn.simpleicons.org/tensorflow/FF6F00" },
+                  { name: "C++", logo: "https://cdn.simpleicons.org/cplusplus/00599C" },
+                  { name: "PyTorch", logo: "https://cdn.simpleicons.org/pytorch/EE4C2C" },
+                  { name: "SQL (PostgreSQL)", logo: "https://cdn.simpleicons.org/postgresql/4169E1" },
+                  { name: "Pandas", logo: "https://cdn.simpleicons.org/pandas/150458" },
+                  { name: "OpenCV", logo: "https://cdn.simpleicons.org/opencv/5C3EE8" },
+                  { name: "FastAPI", logo: "https://cdn.simpleicons.org/fastapi/009688" },
+                  { name: "Seaborn", logo: "https://cdn.simpleicons.org/seaborn/4C72B0" },
+                  { name: "GitHub", logo: "https://cdn.simpleicons.org/github/ffffff" },
+                  { name: "DBMS (MySQL)", logo: "https://cdn.simpleicons.org/mysql/4479A1" }
+                ].map((skill, index) => (
+                  <div
+                    key={index}
+                    className="group flex items-center gap-3 p-4 glass rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02]"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <img
+                      src={skill.logo}
+                      alt={`${skill.name} logo`}
+                      className="w-8 h-8 shrink-0 filter grayscale group-hover:grayscale-0"
+                      loading="lazy"
+                    />
+                    <span className="font-medium text-foreground group-hover:text-primary transition-colors">
+                      {skill.name}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -942,7 +943,7 @@ export default function Index() {
 
 
       {/* Connect Section */}
-      <section id="connect" className="scroll-mt-28 py-32">
+      <section id="connect" className="scroll-mt-28 py-32 scroll-fade-in">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
