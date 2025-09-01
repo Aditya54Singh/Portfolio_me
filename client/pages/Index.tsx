@@ -202,7 +202,7 @@ export default function Index() {
             className="absolute inset-0 bg-center bg-cover bg-fixed"
             style={{
               backgroundImage:
-                'url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2000&q=80")',
+                'url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80")',
             }}
           />
           <div className="absolute inset-0 bg-black/75"></div>
