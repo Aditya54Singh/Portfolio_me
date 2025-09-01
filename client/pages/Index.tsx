@@ -113,10 +113,11 @@ export default function Index() {
     <div className="min-h-screen bg-background overflow-hidden">
       {/* Enhanced Navigation */}
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-500 ${navBackground
-          ? "glass backdrop-blur-2xl border-b border-emerald-500/20 shadow-glass"
-          : "bg-transparent"
-          }`}
+        className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+          navBackground
+            ? "glass backdrop-blur-2xl border-b border-primary/20 shadow-glass"
+            : "bg-transparent"
+        }`}
       >
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
@@ -143,7 +144,6 @@ export default function Index() {
                   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 gradient-blue transition-all duration-300 group-hover:w-3/4 rounded-full"></div>
                 </button>
               ))}
-
             </div>
 
             {/* Mobile Menu Button */}
@@ -163,8 +163,9 @@ export default function Index() {
 
           {/* Mobile Navigation */}
           <div
-            className={`lg:hidden overflow-hidden transition-all duration-500 ${isMenuOpen ? "max-h-96 opacity-100 mt-6" : "max-h-0 opacity-0"
-              }`}
+            className={`lg:hidden overflow-hidden transition-all duration-500 ${
+              isMenuOpen ? "max-h-96 opacity-100 mt-6" : "max-h-0 opacity-0"
+            }`}
           >
             <div className="glass-dark rounded-2xl border border-white/10 p-6">
               <div className="space-y-4">
@@ -198,38 +199,21 @@ export default function Index() {
       >
         {/* Dynamic Background */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 gradient-mesh opacity-20"></div>
-          <div className="absolute inset-0 opacity-30">
-            <div
-              className="absolute w-96 h-96 bg-gradient-to-r from-primary/40 to-accent/40 rounded-full mix-blend-multiply filter blur-3xl animate-float"
-              style={{
-                top: "10%",
-                left: "10%",
-                transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`,
-              }}
-            ></div>
-            <div
-              className="absolute w-96 h-96 bg-gradient-to-r from-emerald-500/40 to-teal-500/40 rounded-full mix-blend-multiply filter blur-3xl animate-float animation-delay-2000"
-              style={{
-                top: "40%",
-                right: "10%",
-                transform: `translate(${mousePosition.x * -0.015}px, ${mousePosition.y * 0.015}px)`,
-              }}
-            ></div>
-            <div
-              className="absolute w-96 h-96 bg-gradient-to-r from-cyan-500/40 to-teal-600/40 rounded-full mix-blend-multiply filter blur-3xl animate-float animation-delay-4000"
-              style={{
-                bottom: "10%",
-                left: "20%",
-                transform: `translate(${mousePosition.x * 0.01}px, ${mousePosition.y * -0.01}px)`,
-              }}
-            ></div>
-          </div>
+          <div
+            className="absolute inset-0 bg-center bg-cover bg-fixed"
+            style={{
+              backgroundImage:
+                'url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80")',
+            }}
+          />
+          <div className="absolute inset-0 bg-black/75"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80"></div>
         </div>
 
         <div
-          className={`container mx-auto px-6 text-center z-10 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
+          className={`container mx-auto px-6 text-center z-10 transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
         >
           <div className="mb-8 inline-flex items-center gap-2 px-6 py-3 glass rounded-full text-sm text-muted-foreground animate-fade-in-up shadow-glass">
             <Sparkles size={16} className="text-primary animate-pulse" />
@@ -280,7 +264,11 @@ export default function Index() {
 
           <div className="flex justify-center space-x-8 animate-fade-in-up animation-delay-2000">
             {[
-              { icon: Github, href: "https://github.com/Aditya54Singh", label: "GitHub" },
+              {
+                icon: Github,
+                href: "https://github.com/Aditya54Singh",
+                label: "GitHub",
+              },
               {
                 icon: Linkedin,
                 href: "https://www.linkedin.com/in/aditya-kumar-singh-b55735249/",
@@ -313,7 +301,10 @@ export default function Index() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="scroll-mt-28 py-32 relative">
+      <section
+        id="about"
+        className="scroll-mt-28 py-32 relative scroll-fade-in"
+      >
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-accent/10"></div>
         <div className="container mx-auto px-6 relative">
           <div className="max-w-6xl mx-auto">
@@ -327,18 +318,19 @@ export default function Index() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="space-y-8 scroll-slide-left">
                 <p className="text-xl text-foreground/80 leading-relaxed">
-                  Hi! I'm Aditya,I'm a Data Science & AI enthusiast with a strong foundation in machine learning,
-                  deep learning, and computer vision. I enjoy transforming raw data into meaningful insights and
-                  building intelligent systems that solve real-world problems
-                  I've worked on projects ranging from image processing with OpenCV, to deep learning models CNNs, ANN.
-                  a
+                  Hi! I'm Aditya,I'm a Data Science & AI enthusiast with a
+                  strong foundation in machine learning, deep learning, and
+                  computer vision. I enjoy transforming raw data into meaningful
+                  insights and building intelligent systems that solve
+                  real-world problems I've worked on projects ranging from image
+                  processing with OpenCV, to deep learning models CNNs, ANN. a
                 </p>
                 <p className="text-xl text-foreground/80 leading-relaxed">
-                  My work spans multiple disciplines, from computer science
-                  to Machine learning, with a focus on creating
-                  meaningful impact through technology. I'm passionate about
-                  open science, collaborative research, and building tools that
-                  empower others.
+                  My work spans multiple disciplines, from computer science to
+                  Machine learning, with a focus on creating meaningful impact
+                  through technology. I'm passionate about open science,
+                  collaborative research, and building tools that empower
+                  others.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-8 pt-8">
@@ -391,9 +383,7 @@ export default function Index() {
                           Bachelors of engineering in Computer Science,
                           Chandigarh University
                         </li>
-                        <li className="flex items-center">
-                          
-                        </li>
+                        <li className="flex items-center"></li>
                       </ul>
                     </CardContent>
                   </Card>
@@ -416,7 +406,10 @@ export default function Index() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="scroll-mt-28 py-32 relative">
+      <section
+        id="projects"
+        className="scroll-mt-28 py-32 relative scroll-fade-in"
+      >
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-accent/10"></div>
         <div className="container mx-auto px-6 relative">
           <div className="text-center mb-20">
@@ -513,7 +506,20 @@ export default function Index() {
       </section>
 
       {/* Publications Section */}
-      <section id="publications" className="scroll-mt-28 py-32">
+      <section
+        id="publications"
+        className="scroll-mt-28 py-32 scroll-fade-in relative overflow-hidden"
+      >
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage:
+                "radial-gradient(800px 400px at 50% -10%, hsl(var(--primary) / 0.25), transparent 60%)",
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+        </div>
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 scroll-fade-in">
@@ -537,7 +543,8 @@ export default function Index() {
                 description:
                   "This paper presents a comprehensive analysis of machine learning techniques for automated code review, introducing a novel framework that improves review accuracy by 34%.",
                 icon: FileText,
-                paperLink: "https://www.ijisrt.com/a-systematic-review-of-machine-learning-algorithms-for-detection-of-polycystic-ovary-syndrome-pcos",
+                paperLink:
+                  "https://www.ijisrt.com/a-systematic-review-of-machine-learning-algorithms-for-detection-of-polycystic-ovary-syndrome-pcos",
                 codeLink: "https://github.com",
               },
               {
@@ -552,7 +559,6 @@ export default function Index() {
                 paperLink: "https://dl.acm.org",
                 codeLink: "https://github.com",
               },
-              
             ].map((pub, index) => (
               <Card
                 key={index}
@@ -608,7 +614,20 @@ export default function Index() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="scroll-mt-28 py-32">
+      <section
+        id="experience"
+        className="scroll-mt-28 py-32 scroll-fade-in relative overflow-hidden"
+      >
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage:
+                "radial-gradient(700px 400px at -10% 20%, hsl(var(--primary) / 0.18), transparent 60%), radial-gradient(600px 300px at 110% 80%, hsl(var(--accent) / 0.12), transparent 60%)",
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
+        </div>
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 scroll-fade-in">
@@ -627,18 +646,25 @@ export default function Index() {
                   title: "Data Science Intern",
                   company: "Celebal Technologies",
                   period: "Summer 2025",
-                  description: "Worked on machine learning projects, data analysis, and model development. Gained hands-on experience with real-world datasets and production ML pipelines.",
+                  description:
+                    "Worked on machine learning projects, data analysis, and model development. Gained hands-on experience with real-world datasets and production ML pipelines.",
                   icon: Brain,
-                  skills: ["Python", "TensorFlow", "Data Analysis", "ML Models"]
+                  skills: [
+                    "Python",
+                    "TensorFlow",
+                    "Data Analysis",
+                    "ML Models",
+                  ],
                 },
                 {
                   title: "Data Analyst Intern",
                   company: "Summer Camp",
                   period: "Summer 2024",
-                  description: "Performed data analysis, created visualizations, and supported business intelligence initiatives. Developed reporting dashboards and data-driven insights.",
+                  description:
+                    "Performed data analysis, created visualizations, and supported business intelligence initiatives. Developed reporting dashboards and data-driven insights.",
                   icon: Database,
-                  skills: ["SQL", "Pandas", "Seaborn", "Data Visualization"]
-                }
+                  skills: ["SQL", "Pandas", "Seaborn", "Data Visualization"],
+                },
               ].map((experience, index) => (
                 <Card
                   key={index}
@@ -652,8 +678,12 @@ export default function Index() {
                           {experience.title}
                         </CardTitle>
                         <CardDescription className="text-lg mb-4">
-                          <span className="text-primary font-semibold">{experience.company}</span>
-                          <span className="text-muted-foreground ml-2">• {experience.period}</span>
+                          <span className="text-primary font-semibold">
+                            {experience.company}
+                          </span>
+                          <span className="text-muted-foreground ml-2">
+                            • {experience.period}
+                          </span>
                         </CardDescription>
                       </div>
                       <div className="p-3 glass rounded-2xl shadow-glass">
@@ -683,10 +713,15 @@ export default function Index() {
         </div>
       </section>
 
-
-
       {/* Certifications Section */}
-      <section id="certifications" className="scroll-mt-28 py-32">
+      <section
+        id="certifications"
+        className="scroll-mt-28 py-32 scroll-fade-in relative overflow-hidden"
+      >
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 gradient-mesh opacity-5"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+        </div>
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 scroll-fade-in">
@@ -796,14 +831,26 @@ export default function Index() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="scroll-mt-28 py-32 relative overflow-hidden">
+      <section
+        id="skills"
+        className="scroll-mt-28 py-32 relative overflow-hidden scroll-fade-in"
+      >
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-accent/10"></div>
 
         {/* Floating background elements */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute w-32 h-32 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ top: '10%', left: '15%' }}></div>
-          <div className="absolute w-24 h-24 bg-gradient-to-r from-emerald-400/30 to-teal-400/30 rounded-full mix-blend-multiply filter blur-xl animate-float animation-delay-2000" style={{ top: '60%', right: '20%' }}></div>
-          <div className="absolute w-20 h-20 bg-gradient-to-r from-purple-400/30 to-pink-400/30 rounded-full mix-blend-multiply filter blur-xl animate-float animation-delay-4000" style={{ bottom: '20%', left: '25%' }}></div>
+          <div
+            className="absolute w-32 h-32 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full mix-blend-multiply filter blur-xl animate-float"
+            style={{ top: "10%", left: "15%" }}
+          ></div>
+          <div
+            className="absolute w-24 h-24 bg-gradient-to-r from-emerald-400/30 to-teal-400/30 rounded-full mix-blend-multiply filter blur-xl animate-float animation-delay-2000"
+            style={{ top: "60%", right: "20%" }}
+          ></div>
+          <div
+            className="absolute w-20 h-20 bg-gradient-to-r from-purple-400/30 to-pink-400/30 rounded-full mix-blend-multiply filter blur-xl animate-float animation-delay-4000"
+            style={{ bottom: "20%", left: "25%" }}
+          ></div>
         </div>
 
         <div className="container mx-auto px-6 relative">
@@ -813,7 +860,8 @@ export default function Index() {
             </h2>
             <div className="w-24 h-1 gradient-blue mx-auto mb-6 scroll-fade-in animation-delay-500 rounded-full"></div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto scroll-fade-in animation-delay-1000">
-              My technical skills and areas of expertise in data science and software development.
+              My technical skills and areas of expertise in data science and
+              software development.
             </p>
           </div>
 
@@ -825,24 +873,28 @@ export default function Index() {
                   <div className="p-3 gradient-blue rounded-2xl shadow-blue">
                     <Brain className="text-white" size={24} />
                   </div>
-                  <h3 className="text-3xl font-bold gradient-text-blue">Core Competencies</h3>
+                  <h3 className="text-3xl font-bold gradient-text-blue">
+                    Core Competencies
+                  </h3>
                 </div>
               </div>
 
               <div className="flex flex-wrap justify-center gap-6 mb-16">
-                {["DSA", "ML", "DL", "Data Science", "Data Analysis"].map((skill, index) => (
-                  <div
-                    key={index}
-                    className="group relative px-8 py-4 glass rounded-full border border-primary/20 hover:border-primary/50 transition-all duration-500 hover:scale-110 hover:shadow-blue cursor-default"
-                    style={{ animationDelay: `${index * 150}ms` }}
-                  >
-                    <div className="absolute inset-0 gradient-blue opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
-                    <span className="relative text-lg font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
-                      {skill}
-                    </span>
-                    <div className="absolute -top-1 -right-1 w-3 h-3 gradient-blue rounded-full animate-pulse opacity-50"></div>
-                  </div>
-                ))}
+                {["DSA", "ML", "DL", "Data Science", "Data Analysis"].map(
+                  (skill, index) => (
+                    <div
+                      key={index}
+                      className="group relative px-8 py-4 glass rounded-full border border-primary/20 hover:border-primary/50 transition-all duration-500 hover:scale-110 hover:shadow-blue cursor-default"
+                      style={{ animationDelay: `${index * 150}ms` }}
+                    >
+                      <div className="absolute inset-0 gradient-blue opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                      <span className="relative text-lg font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                        {skill}
+                      </span>
+                      <div className="absolute -top-1 -right-1 w-3 h-3 gradient-blue rounded-full animate-pulse opacity-50"></div>
+                    </div>
+                  ),
+                )}
               </div>
             </div>
 
@@ -853,48 +905,76 @@ export default function Index() {
                   <div className="p-3 gradient-accent rounded-2xl shadow-blue">
                     <Code className="text-white" size={24} />
                   </div>
-                  <h3 className="text-3xl font-bold gradient-text-blue">Technical Skills</h3>
+                  <h3 className="text-3xl font-bold gradient-text-blue">
+                    Technical Skills
+                  </h3>
                 </div>
               </div>
 
-              {/* Organic layout with different sizes */}
-              <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+              {/* Linear grid of technical skills with logos */}
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
                 {[
-                  { name: "Python", size: "large", color: "from-blue-500 to-blue-600" },
-                  { name: "TensorFlow", size: "medium", color: "from-orange-500 to-red-500" },
-                  { name: "C++", size: "medium", color: "from-purple-500 to-purple-600" },
-                  { name: "PyTorch", size: "large", color: "from-red-500 to-pink-500" },
-                  { name: "SQL", size: "small", color: "from-emerald-500 to-teal-500" },
-                  { name: "Pandas", size: "medium", color: "from-indigo-500 to-purple-500" },
-                  { name: "OpenCV", size: "medium", color: "from-green-500 to-emerald-500" },
-                  { name: "FastAPI", size: "small", color: "from-cyan-500 to-blue-500" },
-                  { name: "Seaborn", size: "small", color: "from-pink-500 to-rose-500" },
-                  { name: "GitHub", size: "small", color: "from-gray-600 to-gray-700" },
-                  { name: "DBMS", size: "medium", color: "from-violet-500 to-purple-500" }
-                ].map((skill, index) => {
-                  const sizeClasses = {
-                    small: "px-4 py-2 text-sm",
-                    medium: "px-6 py-3 text-base",
-                    large: "px-8 py-4 text-lg"
-                  };
-
-                  return (
-                    <div
-                      key={index}
-                      className={`group relative ${sizeClasses[skill.size]} glass rounded-full border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-110 hover:-translate-y-2 cursor-default overflow-hidden`}
-                      style={{
-                        animationDelay: `${index * 100}ms`,
-                        transform: `rotate(${Math.sin(index) * 3}deg)`
-                      }}
-                    >
-                      <div className={`absolute inset-0 bg-gradient-to-r ${skill.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                      <span className="relative font-medium text-foreground group-hover:text-white transition-colors duration-300">
-                        {skill.name}
-                      </span>
-                    </div>
-                  );
-                })}
+                  {
+                    name: "Python",
+                    logo: "https://cdn.simpleicons.org/python/3776AB",
+                  },
+                  {
+                    name: "TensorFlow",
+                    logo: "https://cdn.simpleicons.org/tensorflow/FF6F00",
+                  },
+                  {
+                    name: "C++",
+                    logo: "https://cdn.simpleicons.org/cplusplus/00599C",
+                  },
+                  {
+                    name: "PyTorch",
+                    logo: "https://cdn.simpleicons.org/pytorch/EE4C2C",
+                  },
+                  {
+                    name: "SQL (PostgreSQL)",
+                    logo: "https://cdn.simpleicons.org/postgresql/4169E1",
+                  },
+                  {
+                    name: "Pandas",
+                    logo: "https://cdn.simpleicons.org/pandas/150458",
+                  },
+                  {
+                    name: "OpenCV",
+                    logo: "https://cdn.simpleicons.org/opencv/5C3EE8",
+                  },
+                  {
+                    name: "FastAPI",
+                    logo: "https://cdn.simpleicons.org/fastapi/009688",
+                  },
+                  {
+                    name: "Seaborn",
+                    logo: "https://cdn.simpleicons.org/seaborn/4C72B0",
+                  },
+                  {
+                    name: "GitHub",
+                    logo: "https://cdn.simpleicons.org/github/ffffff",
+                  },
+                  {
+                    name: "DBMS (MySQL)",
+                    logo: "https://cdn.simpleicons.org/mysql/4479A1",
+                  },
+                ].map((skill, index) => (
+                  <div
+                    key={index}
+                    className="group flex items-center gap-3 p-4 glass rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02]"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <img
+                      src={skill.logo}
+                      alt={`${skill.name} logo`}
+                      className="w-8 h-8 shrink-0 filter grayscale group-hover:grayscale-0"
+                      loading="lazy"
+                    />
+                    <span className="font-medium text-foreground group-hover:text-primary transition-colors">
+                      {skill.name}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -906,31 +986,37 @@ export default function Index() {
                     title: "Data Science",
                     icon: "🔬",
                     description: "ML, DL, Data Analysis",
-                    accent: "from-blue-500/20 to-cyan-500/20"
+                    accent: "from-blue-500/20 to-cyan-500/20",
                   },
                   {
                     title: "Programming",
                     icon: "💻",
                     description: "Python, C++, Algorithms",
-                    accent: "from-purple-500/20 to-pink-500/20"
+                    accent: "from-purple-500/20 to-pink-500/20",
                   },
                   {
                     title: "Tools & Frameworks",
                     icon: "🛠️",
                     description: "TensorFlow, PyTorch, APIs",
-                    accent: "from-emerald-500/20 to-teal-500/20"
-                  }
+                    accent: "from-emerald-500/20 to-teal-500/20",
+                  },
                 ].map((category, index) => (
                   <div
                     key={index}
                     className="group text-center p-8 rounded-3xl glass hover:glass-dark border border-white/10 hover:border-primary/30 transition-all duration-500 hover:scale-105"
                     style={{ animationDelay: `${index * 200}ms` }}
                   >
-                    <div className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-br ${category.accent} rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300 shadow-glass`}>
+                    <div
+                      className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-br ${category.accent} rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300 shadow-glass`}
+                    >
                       {category.icon}
                     </div>
-                    <h4 className="text-xl font-bold mb-3 gradient-text-blue">{category.title}</h4>
-                    <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">{category.description}</p>
+                    <h4 className="text-xl font-bold mb-3 gradient-text-blue">
+                      {category.title}
+                    </h4>
+                    <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                      {category.description}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -939,10 +1025,21 @@ export default function Index() {
         </div>
       </section>
 
-
-
       {/* Connect Section */}
-      <section id="connect" className="scroll-mt-28 py-32">
+      <section
+        id="connect"
+        className="scroll-mt-28 py-32 scroll-fade-in relative overflow-hidden"
+      >
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage:
+                "radial-gradient(900px 450px at 50% 110%, hsl(var(--primary) / 0.25), transparent 60%)",
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+        </div>
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
@@ -1039,7 +1136,11 @@ export default function Index() {
 
             <div className="flex space-x-6">
               {[
-                { icon: Github, href: "https://github.com/Aditya54Singh", label: "GitHub" },
+                {
+                  icon: Github,
+                  href: "https://github.com/Aditya54Singh",
+                  label: "GitHub",
+                },
                 {
                   icon: Linkedin,
                   href: "https://www.linkedin.com/in/aditya-kumar-singh-b55735249/",
