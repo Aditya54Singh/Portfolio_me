@@ -495,7 +495,11 @@ export default function Index() {
       </section>
 
       {/* Publications Section */}
-      <section id="publications" className="scroll-mt-28 py-32 scroll-fade-in">
+      <section id="publications" className="scroll-mt-28 py-32 scroll-fade-in relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(800px_400px_at_50%_-10%, hsl(var(--primary) / 0.25), transparent_60%)" }} />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+        </div>
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 scroll-fade-in">
@@ -590,7 +594,11 @@ export default function Index() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="scroll-mt-28 py-32 scroll-fade-in">
+      <section id="experience" className="scroll-mt-28 py-32 scroll-fade-in relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(700px_400px_at_-10%_20%, hsl(var(--primary) / 0.18), transparent_60%), radial-gradient(600px_300px_at_110%_80%, hsl(var(--accent) / 0.12), transparent_60%)" }} />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
+        </div>
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 scroll-fade-in">
@@ -668,7 +676,11 @@ export default function Index() {
 
 
       {/* Certifications Section */}
-      <section id="certifications" className="scroll-mt-28 py-32 scroll-fade-in">
+      <section id="certifications" className="scroll-mt-28 py-32 scroll-fade-in relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 gradient-mesh opacity-5"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+        </div>
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 scroll-fade-in">
@@ -917,7 +929,11 @@ export default function Index() {
 
 
       {/* Connect Section */}
-      <section id="connect" className="scroll-mt-28 py-32 scroll-fade-in">
+      <section id="connect" className="scroll-mt-28 py-32 scroll-fade-in relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(900px_450px_at_50%_110%, hsl(var(--primary) / 0.25), transparent_60%)" }} />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+        </div>
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
